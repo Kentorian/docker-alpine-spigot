@@ -1,0 +1,17 @@
+spigot:
+  build: .
+  environment:
+  - REV=1.9
+  - POLL=true
+  - EULA=TRUE
+  - OPS=AshDev
+  - PVP=false
+  - DYNMAP=true
+  - ESSENTIALS=false
+  - PERMISSIONSEX=false
+  - CLEARLAG=false
+  volumes:
+  - $HOME/Docker/spigot:/minecraft
+  ports:
+  - "25565:25565"
+  - "8123:8123"
