@@ -63,7 +63,7 @@ fi
 if [ -n "$CLEARLAG" ]; then
   if [ "$CLEARLAG" = "true" ]; then
     echo "Downloading ClearLag..."
-    wget -O /$SPIGOT_HOME/plugins/Clearlag.jar http://dev.bukkit.org/media/files/909/721/Clearlag.jar
+    wget -O /$SPIGOT_HOME/plugins/Clearlag.jar https://dev.bukkit.org/media/files/930/479/Clearlag.jar
   else
     echo "Removing Clearlag..."
     rm -f /$SPIGOT_HOME/plugins/Clearlag.jar
