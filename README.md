@@ -247,6 +247,10 @@ the setting shown in the example (max and min at 1024 MB):
 
 DYNMAP=true ESSENTIALS=false PERMISSIONSEX=false CLEARLAG=false
 
+### WorldBorder
+
+    docker run -d -e WORLDBORDER=true -p 8123:8123 ...
+
 ### Dynmap
 
     docker run -d -e DYNMAP=true -p 8123:8123 ...

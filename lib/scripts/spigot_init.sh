@@ -28,6 +28,16 @@ if [ ! -f /$SPIGOT_HOME/spigot.jar ]; then
   mkdir -p /$SPIGOT_HOME/plugins
 fi
 
+if [ -n "$WORLDBORDER" ]; then
+  if [ "$WORLDBORDER" = "true" ]; then
+    echo "Downloading WorldBorder..."
+    wget -O /$SPIGOT_HOME/plugins/WorldBorder.jar https://dev.bukkit.org/media/files/937/149/WorldBorder.jar
+  else
+    echo "Removing WorldBorder..."
+    rm -f /$SPIGOT_HOME/plugins/WorldBorder.jar
+  fi
+fi
+
 if [ -n "$DYNMAP" ]; then
   if [ "$DYNMAP" = "true" ]; then
     echo "Downloading Dynmap..."

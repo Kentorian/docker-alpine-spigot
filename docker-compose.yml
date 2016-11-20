@@ -6,6 +6,7 @@ spigot:
   - EULA=TRUE
   - OPS=AshDev
   - PVP=false
+  - WORLDBORDER=true
   - DYNMAP=true
   - ESSENTIALS=false
   - PERMISSIONSEX=false
