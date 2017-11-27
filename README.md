@@ -2,15 +2,15 @@
 
 [![](https://badge.imagelayers.io/ashdev/docker-alpine-spigot:latest.svg)](https://imagelayers.io/?images=ashdev/docker-alpine-spigot:latest 'Get your own badge on imagelayers.io')
 
-## Minecraft 1.11 Exploration Update
+## Minecraft 1.12 World of Color Update
 
-This docker image is ready to use the latest version of Minecraft (1.11 Exploration Update)
+This docker image is ready to use the latest version of Minecraft (1.12 World of Color Update)
 
 Most of the plugins are not already released for this version. In case of issue, disable them.
 
-To use the version 1.11 of docker run
+To use the version 1.12 of docker run
 
-    docker run -d -it -e REV=1.11 -p 25565:25565 ashdev/docker-spigot:latest
+    docker run -d -it -e REV=1.12 -p 25565:25565 ashdev/docker-spigot:latest
 
 ## Description
 
