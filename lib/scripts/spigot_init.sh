@@ -31,7 +31,7 @@ fi
 if [ -n "$WORLDBORDER" ]; then
   if [ "$WORLDBORDER" = "true" ]; then
     echo "Downloading WorldBorder..."
-    wget -O /$SPIGOT_HOME/plugins/WorldBorder.jar https://dev.bukkit.org/media/files/937/149/WorldBorder.jar
+    wget -O /$SPIGOT_HOME/plugins/WorldBorder.jar https://dev.bukkit.org/projects/worldborder/files/latest
   else
     echo "Removing WorldBorder..."
     rm -f /$SPIGOT_HOME/plugins/WorldBorder.jar
