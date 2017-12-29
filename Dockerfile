@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM ubuntu:16.04
 MAINTAINER AshDev <ashdevfr@gmail.com>
 
 # Java Version and other ENV
@@ -11,13 +11,11 @@ ENV JAVA_VERSION_MAJOR=8 \
     LANG=C.UTF-8
 
 # Install dependencies
-RUN apk upgrade --update && \
-    apk add --update curl ca-certificates bash git
+RUN apt-get update -yyy
 
 # Install Java8
-RUN apk add openjdk8-jre
-
-#default directory for SPIGOT-server
+RUN apt-get install -y default-jdk
+RUN apt-get install -y wget
 ENV SPIGOT_HOME /minecraft
 
 RUN mkdir ${SPIGOT_HOME}
@@ -37,7 +35,7 @@ ENV UID=1000
 
 ENV MOTD A Minecraft Server Powered by Spigot & Docker
 ENV REV latest
-ENV JVM_OPTS -Xmx1024M -Xms1024M
+ENV JVM_OPTS -Xmx3G -Xms3G
 ENV LEVEL=world \
   PVP=true \
   VDIST=10 \
@@ -49,7 +47,7 @@ ENV LEVEL=world \
   WLIST=false \
   ANIMALS=true \
   HC=false \
-  ONLINE=true \
+  ONLINE=false \
   RPACK='' \
   DIFFICULTY=3 \
   CMDBLOCK=false \
@@ -58,7 +56,7 @@ ENV LEVEL=world \
   STRUCTURES=true \
   SPAWNPROTECTION=16
 
-#ENV DYNMAP=true ESSENTIALS=false PERMISSIONSEX=false CLEARLAG=false
+#ENV DYNMAP=true ESSENTIALS=true PERMISSIONSEX=true CLEARLAG=true
 
 #set default command
-CMD /spigot_init.sh
+CMD ls

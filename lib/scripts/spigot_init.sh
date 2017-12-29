@@ -1,4 +1,3 @@
-#!/bin/bash
 set -e
 
 if [ ! -e /$SPIGOT_HOME/eula.txt ]; then
